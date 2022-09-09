@@ -4,8 +4,7 @@ const validateResults = require("../utils/handlevalidator")
 const validatorGetItem = [
     check("Id")
     .exists()
-    .notEmpty()
-    .isMongoId(),
+    .notEmpty(),
     (req,res,next) => {
         return validateResults(req, res, next)
     }
@@ -44,8 +43,7 @@ const validatorCreateItem = [
     .notEmpty(),
     check("mediaId")
     .exists()
-    .notEmpty()
-    .isMongoId(),
+    .notEmpty(),
     (req,res,next) => {
         return validateResults(req, res, next)
     }
